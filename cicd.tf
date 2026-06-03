@@ -42,6 +42,7 @@ resource "aws_instance" "cicd" {
   subnet_id = "subnet-001ec004bd5c5be4b"
 
   vpc_security_group_ids = [aws_security_group.cicd_sg.id]
+  iam_instance_profile = aws_iam_instance_profile.artifactory.name
   user_data = file("jenkins-cicd.script.sh")
 
 
