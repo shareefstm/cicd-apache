@@ -16,3 +16,6 @@ output "aws_s3_bucket" {
   value = aws_s3_bucket.artifactory.bucket
   
 }
+output "tomcatip" {
+  value = aws_instance.tomcat.public_ip
+}
